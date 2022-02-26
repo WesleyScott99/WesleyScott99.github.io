@@ -858,6 +858,7 @@ def motion(event, chessboard): # creates a unique yellow tile over the currently
 # without extending the canvas
 
 def main():
+    print("hello world")
     window = Tk()
     window.geometry("1200x634+400+0")
     window.title("Fuzzy-Logic Medieval Chess")
