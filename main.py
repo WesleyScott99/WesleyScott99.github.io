@@ -1,9 +1,18 @@
-import sys
-input=sys.argv[1]
-print(input)
+const output = document.getElementById("output")
+const code = document.getElementById("code")
 
-def main():
-    print("hello world")
+function addToOutput(s) {
+output.value += `>>>${code.value}\n${s}\n`
+output.scrollTop = output.scrollHeight
+code.value=''
+}
 
-if __name__ == "__main__":
-    main()
+output.value = 'Initializing...\n'
+// init pyodide
+languagePluginLoader.then(() => { output.value += 'Ready!\n' })
+
+function evaluatePython() {
+pyodide.runPythonAsync(code.value)
+    .then(output => addToOutput(output))
+    .catch((err) => { addToOutput(err) })
+}
