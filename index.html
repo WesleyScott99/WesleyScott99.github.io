@@ -1,63 +1,13 @@
 <!DOCTYPE html>
 
-<html>
-<head>
-   <meta charset="utf-8">
-	<title>viddy game</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://github.com/WesleyScott99/WesleyScott99.github.io/blob/main/main.py" rel="stylesheet">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-   
-   <script src="https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js"></script>
-   <script>
-      // init environment
-      languagePluginLoader
-      // then run Python code
-         .then(() => console.log(pyodide.runPython(`import sys; sys.version`)));
-   </script>
-</head>
-   
-<header>
-	<div class="navbar-header">
-      <a class="navbar-brand" href="/">
-	  <img style="max-width:120px; margin-top: -7px;" src="https://github.com/WesleyScott99/WesleyScott99.github.io/blob/main/main.py">
-	  </a>
-    </div>
-	
-	
-	<div class = "container-fluid">
+<head><title>Test</title> 
+    <meta charset=utf-8> </head>
+    <body>
+        <h1>My Website</h1>
+        <form action="/my-link/">
+            <input type="submit" value="Click me" />
+        </form>
+        
+        <button> <a href="/my-link/">Click me</a></button>
 
-		<a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 5px; margin-bottom: 5px; height: 44px; margin-right: 15px">
-		  <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Start Learning
-		</button></a>
-
-	<ul class="nav navbar-nav navbar-right">
-		  <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
-			<a href="/WesleyScott99.github.io/blob/main/main.py"> <span class="glyphicon glyphicon-heart"></span> main     </a>
-			<a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login   </a>
-		<a href="/register/"><span class="glyphicon glyphicon-pencil"></span> Sign up</a><h5>
-	  </div>
-      </ul>
-	</div>
-
-</header>
-<body>
-   <div class="container" style="min-height:100% width:80%">
-	{% with messages = get_flashed_messages() %}
-	  {% if messages %}
-	    {% for message in messages %}
-		  <div class="alert alert-warning alert-dismissible" role="alert">
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-			{{message}}
-		  </div>
-		{% endfor %}
-	  {% endif %}
-	{% endwith %}
-	
-	{% block body %}{% endblock %}
-	</div>
-
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-</body>
-</html>
+    </body>
