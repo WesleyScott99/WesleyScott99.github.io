@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link 
-  </head>
-  <body style="background-color:grey">
-    <h1>Chess game</h1>
-    <div id="container">
-      <div class="status"></div>
-      <div class="status"></div>
-      #container {
-        width: 800px;
-        height: 600px;
-        margin: 0 auto;
-        border: 1px solid #ccc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .status {
-          height: 100px;
-          width: 100px;
-          background: #efefef;
-          margin-left: 2px;
-          border: 1px solid #ccc;
-      }
-    </div>
-  </body>
-</html>
+
+<head>
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <title>Insert Name</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  
+    <Center>
+        <h1 style="font-family: Arial">Insert Name</h1>
+    </Center>
+</head>
+<br>
+<br>
+<body>
+    <div style="background-color:rgb(0, 0, 0);color:rgb(255, 255, 255);padding:20px;">
+
+        <h2 style="font-family: Arial">Unblocked Games</h2>
+        <div class="row">
+            <div class="column" style="background-color:#000000;">
+                <!--Row 1 Start-->
+                
+                <input type="button" onclick="location.href='/gamesrow1/.html';" value="Game 1" />
+                <br><br>
+                
+                <!--Row 1 End-->
+            </div>
+            <div class="column" style="background-color:#000000;">
+                <!--Row 2 Start-->
+
+                <input type="button" onclick="location.href='gamesrow2/.html';" value="Game 2" />
+                <br><br>
+                
+                <!--Row 2 end-->
+            </div>
+</body>
