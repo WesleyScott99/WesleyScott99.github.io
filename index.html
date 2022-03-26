@@ -2,21 +2,13 @@
 <html>
   <head>    
   </head>
-  <body>
+  <body style="background-color:grey">
     <h1>Chess game</h1>
-    <input type="button" id='script' name="scriptbutton" value="Run Script" onclick="goPython()">
-
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script>
-        function goPython(){
-            $.ajax({
-              url: "/WesleyScott99.github.io/blob/main/main.py",
-             context: document.body
-            }).done(function() {
-             alert('finished python script');;
-            });
+    <div id="square"></div>    
+    #square {
+            width: 100px;
+            height: 100px;
+            background: red;
         }
-    </script>
   </body>
 </html>
